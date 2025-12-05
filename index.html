@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paww Paww Pet Shop | Premium Treats & Litter</title>
+    <style>
+        /* BRAND COLORS */
+        :root {
+            --primary: #E89CA9; /* Soft Pink from your logo */
+            --secondary: #8AC6D1; /* Soft Blue from your logo */
+            --accent-gold: #C5A059; /* Luxury Gold */
+            --text-dark: #4A4A4A;
+            --bg-cream: #FFFBF0;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            text-align: center;
+            padding: 20px;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo-img {
+            max-width: 150px; /* Adjust based on your logo file size */
+            height: auto;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--white), #fef6f7);
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .hero h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .promo-banner {
+            background-color: var(--accent-gold);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* PRODUCT CARDS */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media(min-width: 768px) {
+            .grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #eee;
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .product-img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 { color: var(--text-dark); margin-bottom: 5px; }
+        .sub-text { color: #888; font-size: 0.9rem; margin-bottom: 15px; }
+        
+        .price-tag {
+            font-size: 1.4rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #bbb;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        .features {
+            text-align: left;
+            font-size: 0.9rem;
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+        
+        .features li { list-style: none; }
+        .features li::before { content: "✓ "; color: var(--secondary); font-weight: bold; }
+
+        /* BUTTONS */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px 0;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-primary { background-color: var(--primary); color: white; }
+        .btn-primary:hover { background-color: #d47f8e; }
+
+        .btn-secondary { background-color: var(--secondary); color: white; }
+        .btn-secondary:hover { background-color: #6faebd; }
+
+        .bundle-section {
+            background-color: #2C3E50;
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .bundle-section h2 { color: var(--accent-gold); }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <!-- PLACE YOUR LOGO HERE: Ensure file is named logo.jpg or logo.png -->
+        <img src="logo.jpg" alt="Paww Paww Pet Shop" class="logo-img" onerror="this.style.display='none'; document.write('<h1>🐾 Paww Paww Pet Shop</h1>')">
+    </div>
+
+    <div class="container">
+        
+        <div class="hero">
+            <div class="promo-banner">🔥 FLASH DEAL: FREE SHIPPING in Klang Valley for Orders > RM50</div>
+            <h1>Premium Care for Your Oyen</h1>
+            <p>Certified Safety (HACCP/ISO). Japanese Formulation. Pure Happiness.</p>
+            <a href="#bundles" class="btn btn-secondary" style="width: 200px; margin: 20px auto;">View Bundles</a>
+        </div>
+
+        <div class="grid">
+            
+            <!-- PRODUCT 1: POTOPET TREATS -->
+            <div class="card">
+                <img src="catStick.jpg" alt="Potopet Creamy Treats" class="product-img" onerror="this.src='https://placehold.co/600x400/ffe4e1/E89CA9?text=Potopet+Image'">
+                <h2>Potopet Premium Cat Treat Sticks</h2>
+                <div class="sub-text">Hydration Support | Grain-Free Snack | Urinary Support</div>
+                
+                <div class="price-tag">
+                    <span class="old-price">RM 15.00</span> RM 6.90 <span style="font-size:0.8rem; color:#777">/ 10 sticks</span>
+                </div>
+
+                <!-- <ul class="features">
+                    <li>🐟 <strong>Real Deep Sea Fish:</strong> No by-products, just pure meat.</li>
+                    <li>💧 <strong>Urinary Health:</strong> High moisture to prevent kidney issues.</li>
+                    <li>🛡️ <strong>Certified Safe:</strong> HACCP & ISO9001 Certified factory.</li>
+                    <li>❌ <strong>Zero Junk:</strong> No preservatives, no artificial colors.</li>
+                </ul> -->
+
+                <ul class="features">
+                    <li>💧 <strong>High-Moisture & Grain-Free:</strong> Helps keep your cat hydrated — ideal for urinary & kidney health.</li>
+                    <li>🐟 <strong>Real Meat – Fish & Chicken:</strong> Rich in protein with NO by-products or fillers.</li>
+                    <li>🌿 <strong>All-Natural Treat:</strong> No preservatives, no artificial colours, no grains — gentle for sensitive tummies.</li>
+                    <li>😺 <strong>All Life Stages Friendly:</strong> Suitable for kittens, adults, and senior cats.</li>
+                    <li>🥄 <strong>Tasty & Palatable Snack:</strong> Soft, creamy/lickable texture that cats love — perfect for picky eaters or bonding moments.</li>
+                </ul>
+
+                <p style="font-size:0.9rem; font-weight:bold;">Flavors: 🐔 Chicken | 🐟 Salmon | 🍣 Tuna</p>
+
+
+                <p style="font-size:0.85rem; color:#555;">
+                    <em>Note: Use as a complementary treat or snack. Ensure your cat has access to fresh water at all times, and maintain a balanced diet for daily meals.</em>
+                </p>
+
+                <a href="https://wa.me/60177039222?text=Hi%20PawwPaww!%20I%20want%20to%20buy%20the%20Potopet%20Value%20Pack%20(50%20sticks)%20for%20RM29.90." class="btn btn-primary">
+                    Get 50 Sticks (RM 29.90) ➔
+                </a>
+                <a href="https://wa.me/60177039222?text=Hi%20PawwPaww!%20I%20want%20to%20try%20the%2010-stick%20pack%20for%20RM6.90." class="btn btn-secondary" style="background:transparent; color:var(--secondary); border:2px solid var(--secondary)">
+                    Try 10 Sticks (RM 6.90)
+                </a>
+            </div>
+
+            <!-- PRODUCT 2: TADASHI LITTER -->
+            <div class="card">
+                <img src="litter.jpg" alt="Tadashi Tofu Litter" class="product-img" onerror="this.src='https://placehold.co/600x400/e0f7fa/8AC6D1?text=Tadashi+Image'">
+                <h2>Tadashi Premium Tofu Cat Litter (7 L / 2.5 kg)</h2>
+                <div class="sub-text">Japanese Formula | Flushable | Dust-Free</div>
+                
+                <div class="price-tag">
+                    <span class="old-price">RM 25.00</span> RM 18.90 <span style="font-size:0.8rem; color:#777">/ bag</span>
+                </div>
+
+                <!-- <ul class="features">
+                    <li>🚽 <strong>Flushable & Septic Safe:</strong> Dissolves instantly in water.</li>
+                    <li>💨 <strong>99.9% Dust Free:</strong> Protects your cat's respiratory system.</li>
+                    <li>🌸 <strong>Odor Lock:</strong> 2mm pellets trap smell instantly.</li>
+                    <li>🌿 <strong>Food Grade:</strong> Made from natural pea/corn starch.</li>
+                </ul> -->
+
+                <ul class="features">
+                    <!-- <li>♻️ <strong>Eco-Friendly & Biodegradable:</strong> Made from natural plant-based materials, gentle on Earth and your home environment.</li> -->
+                    <li>🚽 <strong>Flushable (small amounts):</strong> Designed to dissolve in water — convenient disposal and less trash waste.</li>
+                    <li>💨 <strong>Low Dust & Hypoallergenic:</strong> Minimizes dust — ideal for cats (or people) with respiratory sensitivities.</li>
+                    <li>🧼 <strong>Strong Absorbency & Easy Clumping:</strong> Quickly absorbs urine and solid waste; clumps are easy to scoop out.</li>
+                    <li>🛑 <strong>Natural Odor Control:</strong> Neutralizes odors without harsh chemicals or heavy fragrances (Original / Unscented option available).</li>
+                    <!-- <li>🐾 <strong>Paw-Friendly Texture:</strong> Soft pellets that are gentle on sensitive paws — a comfortable choice for cats.</li>
+                    <li>🌿 <strong>Lightweight & Easy to Handle:</strong> Easier to carry, pour and store compared to heavy clay litters.</li> -->
+                </ul>
+
+                <p style="font-size:0.9rem; font-weight:bold;">Scents: 🍵 Green Tea | ✨ Original</p>
+
+                <p style="font-size:0.85rem; color:#555;">
+                    <em>Tip: Use in moderate amounts. Scoop waste daily, and fully replace litter every 2–3 weeks (or as per usage). If you flush, do so in small amounts only — and check if your plumbing / local regulations allow flushing pet waste. Store in a cool, dry place to preserve freshness.</em>
+                </p>
+
+                <a href="https://wa.me/60177039222?text=Hi%20PawwPaww!%20I%20need%202%20bags%20of%20Tadashi%20Litter%20promo%20price%20RM40." class="btn btn-primary">
+                    Buy 2 Bags (RM 28.90) ➔
+                </a>
+                <a href="https://wa.me/60177039222?text=Hi%20PawwPaww!%20I%20need%201%20bag%20of%20Tadashi%20Litter." class="btn btn-secondary" style="background:transparent; color:var(--secondary); border:2px solid var(--secondary)">
+                    Buy 1 Bag (RM 18.90)
+                </a>
+            </div>
+
+        </div>
+
+        <!-- BUNDLE SECTION -->
+        <div id="bundles" class="bundle-section">
+            <h2>🏆 The "Monthly Essentials" Bundle</h2>
+            <p>Everything your cat needs for the month. Save money & time.</p>
+            <br>
+            <div style="background:rgba(255,255,255,0.1); padding:20px; border-radius:10px; display:inline-block; text-align:left;">
+                <p>✅ 1 Bag Tadashi Tofu Litter (7L)</p>
+                <p>✅ 30 Sticks Potopet Treats (Mixed Flavors)</p>
+                <h3 style="color:var(--accent-gold); margin-top:10px;">RM 35.90 ONLY <span style="font-size:0.8rem; color:#ccc; text-decoration:line-through;">(NP: RM 70)</span></h3>
+            </div>
+            <br>
+            <a href="https://wa.me/60177039222?text=Hi!%20I%20want%20the%20Monthly%20Essentials%20Bundle%20(RM35.90).%20My%20location%20is..." class="btn btn-primary" style="background-color:var(--accent-gold); width:80%; max-width:300px; margin:20px auto;">
+                Grab Deal Now via WhatsApp ➔
+            </a>
+        </div>
+
+        <div style="text-align:center; margin-top:40px; color:#888; font-size:0.8rem;">
+            <p>Paww Paww Pet Shop © 2024 | Fast Shipping from Cheras</p>
+            <p>Support Local Business 🇲🇾</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
